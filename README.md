@@ -71,6 +71,26 @@ ln -s ../skills .agents/skills
 > resolves relative to the real file location (`skills/<name>/` → `../../`), so it works through
 > either symlink.
 
+## How to Work with This
+
+### 1. The "Build-a-Spec" Workflow (Greenfield / New Features)
+When starting a new system or designing a new module for an existing one, leverage this highly collaborative workflow:
+
+* **Orientation & Q&A**: Provide the agent with all requirements, context, and any previous knowledge about the system you want to build. Have the agent grill you or run a Q&A session in planning mode until you have a solid first version of the spec.
+* **Multi-Model Iteration**: Iterate on the draft by passing it across different LLM models/agents. Use different models to both critique the design (finding edge cases, scalability issues, etc.) and contribute improvements.
+* **Publish & Roadmap**: Once you are happy with the results, publish the final version as the official design spec, and generate a structured "roadmap" for the builder agents to execute.
+
+### 2. Multi-Module Systems & Implementation Specs
+For larger systems, the specification standard guides the overall architecture, but the work is split into submodules:
+* **Implementation Specs**: Submodules can have their own focused "implementation specs" that do not necessarily follow this high-level format but are optimized for builder agents.
+* **Agent Co-ownership**: These implementation specs are committed directly to the repository. The agents read them to understand their tasks and keep them continuously updated as they write code.
+* **Task Management**: Tasks are broken down, mapped with clear dependencies, and managed either directly in the repository (e.g., via Markdown task lists) or inside **Linear**.
+
+### 3. Reverse Engineering & Auditing (Brownfield)
+When adopting or analyzing a new or complex codebase, use the `reverse-engineer-system-design` skill to:
+* **Map the Codebase**: Automatically generate a code-faithful specification.
+* **Audit for Divergence**: Keep the spec and the actual code in sync by running the skill in audit mode as the system evolves.
+
 ## Using the skills
 
 In a Claude Code session, invoke the matching skill (`/apply-system-design` or
