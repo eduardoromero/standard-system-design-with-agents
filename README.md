@@ -1,12 +1,27 @@
 # Standard System Design — with Agents
 
-A rigorous **Systems Design Specification Standard** plus two agent **skills** that put it to work. The goal: specs that are *succinct, complete, and — above all — true*, whether you're designing a new system or documenting an existing one.
+> A rigorous **Systems Design Specification Standard** plus two agent **skills** that put it to work. The goal: specs that are *succinct, complete, and — above all — true*, whether you're designing a new system or documenting an existing one.
+
+^^^ This was obviously an agent.
+
+This is my standard **System Design Spec**. I use it when working on a new system or when building a new module on an existing one. But, agents are really good at using the same guidance to reverse engineer an existing system into this format, which makes it a great companion for understanding new / complex codebases too.
+
+I use it mainly with Claude Code and Antigravity (prev. Gemini cli), but I assume it should work with any others.
+
 
 ## Why this exists
 
-A design spec is only useful if it's trustworthy. The most common failure of both humans and AI agents is writing **plausible fiction** — inventing throughput numbers, assuming `CASCADE` deletes, guessing an endpoint returns HTML when it returns JSON. A confident, well-formatted spec with one fabricated fact is *worse* than no spec, because it gets trusted and propagated.
+> A design spec is only useful if it's trustworthy. The most common failure of both humans and AI agents is writing **plausible fiction** — inventing throughput numbers, assuming `CASCADE` deletes, guessing an endpoint returns HTML when it returns JSON. A confident, well-formatted spec with one fabricated fact is *worse* than no spec, because it gets trusted and propagated.
+>
+> This repo encodes the discipline that prevents that, and the workflows that apply it.
 
-This repo encodes the discipline that prevents that, and the workflows that apply it.
+^^ Again, this is why _Gemini_ thinks this exists. In reality the goal is two fold:
+
+1. Standardize the way that we write high-level spec in a format that the team can understand.
+2. Help anyone iterate on _any_ system as a learning excercise.
+
+There's another benefit: Agents are _excepional_ at reading one of these specs and breaking them down into modules, a dependency map and implementation tasks. You can feed that into your army of agents to build it.
+
 
 ## What's here
 
