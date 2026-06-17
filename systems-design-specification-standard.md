@@ -5,6 +5,8 @@
 **Goal:** Enforce "thinking before coding." Document intent (what and why) before implementation (how), and keep every claim grounded in a verifiable source of truth so the document stays trustworthy.
 
 > **A spec is only useful if it is true.** A confident, well-formatted spec that contains one fabricated number or one assumed behavior is *worse* than no spec — it gets trusted and propagated. Read **§0 Evidence & Authoring Discipline before writing a single line.**
+>
+> 💡 **Need help understanding these requirements?** Check out the [Systems Design Pedagogical Guide](./systems-design-pedagogical-guide.md) for deep dives, examples, and staff challenge questions that teach you how to think through these architectural constraints.
 
 ---
 
